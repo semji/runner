@@ -1,4 +1,4 @@
-FROM docker:stable-dind
+FROM docker:18.09.7-dind
 
 RUN apk add --update alpine-sdk
 RUN apk add --update bash python python-dev py-pip libffi-dev build-base openssl-dev openssh jq rsync gcc libc-dev make gettext

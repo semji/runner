@@ -1,7 +1,7 @@
 FROM docker:stable-dind
 
 RUN apk add --update alpine-sdk
-RUN apk add --update bash python python-dev py-pip build-base openssh jq rsync gettext
+RUN apk add --update bash python python-dev py-pip libffi-dev build-base openssl-dev openssh jq rsync gcc libc-dev make gettext
 RUN apk add -U --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing aufs-util
 RUN pip install docker-compose
 RUN pip install awscli

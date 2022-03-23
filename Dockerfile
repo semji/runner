@@ -1,7 +1,7 @@
 FROM docker:20.10-dind
 
 RUN apk add --update alpine-sdk
-RUN apk add --update bash python3 python3-dev py-pip libffi-dev build-base openssl-dev openssh jq rsync gcc libc-dev make gettext rust cargo make
+RUN apk add --update bash python3 python3-dev py-pip libffi-dev build-base openssl-dev openssh jq rsync gcc libc-dev make gettext rust cargo make zip
 RUN apk add -U --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing aufs-util
 RUN pip install docker-compose
 RUN pip install awscli

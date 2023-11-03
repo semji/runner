@@ -1,4 +1,4 @@
-FROM docker:20.10
+FROM docker:24.0
 
 RUN apk add --update \
     alpine-sdk \
@@ -16,8 +16,6 @@ RUN apk add --update \
     npm
 
 RUN apk add -U --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing aufs-util
-
-RUN pip install docker-compose
 
 RUN pip install awscli
 
